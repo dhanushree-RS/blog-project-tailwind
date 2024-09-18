@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Project</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+       
+</head>
+
+<body>
+    <div class="bg-custom-gradient font-custom">
+        <div class="container mx-auto bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-500 p-4 rounded-lg shadow-lg">
+            <nav class="flex justify-between items-center">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="#">
+                        <img class="h-16 w-16 rounded-full shadow-md transform transition-transform duration-300 hover:scale-105 animated-border"
+                src="https://picsum.photos/200" alt="Logo">`
+                    </a>
+                </div>
+        
+                <!-- Title Section -->
+                <div class="text-center flex-grow hidden md:block">
+                    <h1 class="text-3xl font-bold text-white">My Website</h1>
+                </div>
+        
+                <!-- SVG Icon for Mobile (visible on smaller screens only) -->
+                <button id="nav-toggle" class="md:hidden focus:outline-none">
+                    <svg class="h-10 w-10 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M7 12H17M9 18H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+        
+                <!-- Navigation Links (visible on larger screens) -->
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#"
+                            class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">Home</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">About</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">Services</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">Contact</a>
+                    </li>
+                </ul>
+        
+                <!-- Buttons (visible only on larger screens) -->
+                <div class="hidden md:flex ml-2 space-x-2">
+                    <button
+                        class="bg-blue-600 text-white py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300">
+                        Sign Up
+                    </button>
+                    <button
+                        class="bg-green-600 text-white py-2 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">
+                        Sign In
+                    </button>
+                </div>
+            </nav>
+        
+            <!-- Mobile Menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 bg-indigo-600 rounded-lg shadow-lg p-6">
+                <ul class="flex flex-col items-center space-y-6">
+                    <li>
+                        <a href="#"
+                            class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">Contact</a>
+                    </li>
+                    <li>
+                        <button
+                            class="bg-blue-600 text-white py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300">
+                            Sign Up
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            class="mt-2 bg-green-600 text-white py-2 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">
+                            Sign In
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <script>
+            const navToggle = document.getElementById('nav-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+        
+            navToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+        </script>
+        
+    
+
+            <!-- Mobile Menu -->
+            <!-- <div id="nav-menu-mobile"
+            class="hidden peer-checked:flex md:hidden flex-col mt-4 space-y-2 transition-all duration-300">
+            <h1 class="text-3xl font-bold text-white text-center">My Website</h1>
+            <a href="#" class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">Home</a>
+            <a href="#" class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">About</a>
+            <a href="#" class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">Services</a>
+            <a href="#" class="text-white font-medium hover:text-yellow-300 transition-colors duration-300">Contact</a>
+            <div class="flex flex-col space-y-2">
+                <button
+                    class="bg-blue-600 text-white py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300">Sign
+                    Up</button>
+                <button
+                    class="bg-green-600 text-white py-2 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">Sign
+                    In</button>
+
+                    
+            </div>
+        </div> -->
+
+
+            <!-- Hamburger Menu Button for Mobile -->
+            <!-- <input type="checkbox" id="nav-toggle" class="peer hidden">
+            <label for="nav-toggle" class="block md:hidden text-white cursor-pointer">
+                <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M4 5h16M4 11h16M4 17h16" />
+                </svg>
+            </label>
+    </div>
+    
+
+
+
+       <!- Hero section -->
+            <div
+                class="container mx-auto mt-12 flex flex-col md:flex-row items-center bg-gray-50 p-8 rounded-lg shadow-lg">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <p class="mt-7"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sit! Nihil corrupti
+                        dolor
+                        harum numquam recusandae amet explicabo distinctio fuga, ut suscipit velit nisi perspiciatis
+                        eveniet
+                        eos iure est commodi!</p>
+                    <button
+                        class="bg-indigo-600 text-white px-8 py-3 rounded-full mt-6 font-semibold hover:bg-indigo-700 transition duration-300">Get
+                        started</button>
+
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <img src="./assets/security.png" alt="" class="mx-auto h-45 w-45 ">
+
+                </div>
+            </div>
+
+            <!---Main seciton--->
+            <div class="container mx-auto mt-12">
+                <div class="text-center mb-8">
+                    <h1 class="font-bold text-indigo-700 text-4xl">Our Services</h1>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between gap-8">
+                    <div
+                        class="w-full md:w-1/3 text-center flex flex-col items-center bg-white shadow-lg rounded-xl p-6 transform transition-transform duration-500 hover:scale-105">
+                        <img src="./assets/threat.svg" alt="Automated Threat Management" class="h-40 w-40 mb-4">
+                        <h2 class="text-2xl font-semibold text-indigo-600 mb-2">Automated Threat Management</h2>
+                        <p class="text-gray-600">Enhancing efficiency and reducing human error through automation in
+                            threat
+                            mitigation.</p>
+                    </div>
+                    <div
+                        class="w-full md:w-1/3 text-center flex flex-col items-center bg-white shadow-lg rounded-xl p-6 transform transition-transform duration-500 hover:scale-105">
+                        <img src="./assets/user.svg" alt="Enhanced User Awareness" class="h-40 w-40 mb-4">
+                        <h2 class="text-2xl font-semibold text-indigo-600 mb-2">Enhanced User Awareness</h2>
+                        <p class="text-gray-600">Comprehensive training and updates on the latest threats and best
+                            practices.</p>
+                    </div>
+                    <div
+                        class="w-full md:w-1/3 text-center flex flex-col items-center bg-white shadow-lg rounded-xl p-6 transform transition-transform duration-500 hover:scale-105">
+                        <img src="./assets/playbook.svg" alt="Playbook Customization and Use" class="h-40 w-40 mb-4">
+                        <h2 class="text-2xl font-semibold text-indigo-600 mb-2">Playbook Customization and Use</h2>
+                        <p class="text-gray-600">Drag-and-drop and coding; creating and enhancing playbooks for detailed
+                            operations.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Products-->
+            <div class="container mx-auto mt-12">
+                <div class="text-center mb-12">
+                    <h1 class="font-bold text-indigo-700 text-4xl">Products</h1>
+                    <p class="text-xl text-gray-600 mt-2">Explore our featured products</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Card -->
+                    <div
+                        class="bg-gradient-to-r from-indigo-200 to-purple-300 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Level 1</h2>
+                        <h3 class="text-2xl font-extrabold text-indigo-700 mb-4">Beginner</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-black mr-2" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm13.707-2.707a1 1 0 011.414 1.414L12.414 15.414a1 1 0 01-1.414 0l-2.707-2.707a1 1 0 111.414-1.414L11 13.586l3.707-3.707z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Basic Networking</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-black mr-2" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm13.707-2.707a1 1 0 011.414 1.414L12.414 15.414a1 1 0 01-1.414 0l-2.707-2.707a1 1 0 111.414-1.414L11 13.586l3.707-3.707z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Basic Networking</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-black mr-2" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm13.707-2.707a1 1 0 011.414 1.414L12.414 15.414a1 1 0 01-1.414 0l-2.707-2.707a1 1 0 111.414-1.414L11 13.586l3.707-3.707z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Basic Networking</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-gradient-to-r from-indigo-200 to-purple-300 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Level 1</h2>
+                        <h3 class="text-2xl font-extrabold text-indigo-700 mb-4">Beginner</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-black mr-2" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm13.707-2.707a1 1 0 011.414 1.414L12.414 15.414a1 1 0 01-1.414 0l-2.707-2.707a1 1 0 111.414-1.414L11 13.586l3.707-3.707z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Basic Networking</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-black mr-2" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm13.707-2.707a1 1 0 011.414 1.414L12.414 15.414a1 1 0 01-1.414 0l-2.707-2.707a1 1 0 111.414-1.414L11 13.586l3.707-3.707z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Basic Networking</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-black mr-2" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm13.707-2.707a1 1 0 011.414 1.414L12.414 15.414a1 1 0 01-1.414 0l-2.707-2.707a1 1 0 111.414-1.414L11 13.586l3.707-3.707z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Basic Networking</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-gradient-to-r from-indigo-200 to-purple-300 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Level 1</h2>
+                        <h3 class="text-2xl font-extrabold text-indigo-700 mb-4">Beginner</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-black mr-2" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm13.707-2.707a1 1 0 011.414 1.414L12.414 15.414a1 1 0 01-1.414 0l-2.707-2.707a1 1 0 111.414-1.414L11 13.586l3.707-3.707z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Basic Networking</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-black mr-2" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm13.707-2.707a1 1 0 011.414 1.414L12.414 15.414a1 1 0 01-1.414 0l-2.707-2.707a1 1 0 111.414-1.414L11 13.586l3.707-3.707z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Basic Networking</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-black mr-2" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm13.707-2.707a1 1 0 011.414 1.414L12.414 15.414a1 1 0 01-1.414 0l-2.707-2.707a1 1 0 111.414-1.414L11 13.586l3.707-3.707z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Basic Networking</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--Stories section-->
+            <div class="container mx-auto mt-12">
+                <div class="text-center mb-10">
+                    <h1 class="text-xl font-semibold text-indigo-600 uppercase tracking-widest">Recent Updates</h1>
+                    <h1 class="text-5xl font-bold text-gray-900">Featured Stories</h1>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div
+                        class="bg-white rounded-3xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+                        <img class="rounded-t-3xl h-48 w-full object-cover" src="https://picsum.photos/400/300" alt="">
+                        <div class="p-6">
+                            <h1 class="text-2xl font-semibold text-indigo-700 mb-4">Google Rankings</h1>
+                            <p class="text-gray-600 my-5">Discover the latest trends and tips on how to rank higher in
+                                Google search results.</p>
+                            <a href="# " class="text-indigo-700 font-bold hover:text-black">Read More </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-3xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+                        <img class="rounded-t-3xl h-48 w-full object-cover" src="https://picsum.photos/400/300" alt="">
+                        <div class="p-6">
+                            <h1 class="text-2xl font-semibold text-indigo-700 mb-4">SEO Best Practices</h1>
+                            <p class="text-gray-600 my-5">Learn the best SEO practices to ensure your website is
+                                optimized
+                                for search engines.</p>
+                            <a href="# " class="text-indigo-700 font-bold hover:text-black">Read More </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-3xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+                        <img class="rounded-t-3xl h-48 w-full object-cover" src="https://picsum.photos/400/300" alt="">
+                        <div class="p-6">
+                            <h1 class="text-2xl font-semibold text-indigo-700 mb-4">Content Strategy</h1>
+                            <p class="text-gray-600 my-5">Understand how to create a content strategy that drives
+                                traffic
+                                and engagement.</p>
+                            <a href="# " class="text-indigo-700 font-bold hover:text-black">Read More </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <footer class="bg-gray-50 p-8 rounded-lg shadow-lg mt-12">
+                <div class="container mx-auto flex flex-wrap p-8">
+                    <!-- Brand Section -->
+                    <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                        <p class="font-bold text-2xl text-indigo-700">&copy; 2024 Dhanoss!</p>
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="w-full md:w-1/2 flex flex-wrap justify-between">
+                        <!-- About Section -->
+                        <div class="w-full sm:w-1/2 md:w-auto mb-8 md:mb-0">
+                            <h2 class="font-medium text-lg text-indigo-900">About</h2>
+                            <ul class="space-y-2 mt-4">
+                                <li><a href="#"
+                                        class="text-gray-600 hover:text-indigo-700 transition duration-300">Company</a>
+                                </li>
+                                <li><a href="#"
+                                        class="text-gray-600 hover:text-indigo-700 transition duration-300">Team</a>
+                                </li>
+                                <li><a href="#"
+                                        class="text-gray-600 hover:text-indigo-700 transition duration-300">Press</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Services Section -->
+                        <div class="w-full sm:w-1/2 md:w-auto mb-8 md:mb-0">
+                            <h2 class="font-medium text-lg text-indigo-900">Services</h2>
+                            <ul class="space-y-2 mt-4">
+                                <li><a href="#"
+                                        class="text-gray-600 hover:text-indigo-700 transition duration-300">SEO</a></li>
+                                <li><a href="#"
+                                        class="text-gray-600 hover:text-indigo-700 transition duration-300">Content
+                                        Marketing</a></li>
+                                <li><a href="#"
+                                        class="text-gray-600 hover:text-indigo-700 transition duration-300">Digital
+                                        Marketing</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Help & Support Section -->
+                        <div class="w-full sm:w-1/2 md:w-auto">
+                            <h2 class="font-medium text-lg text-indigo-900">Help & Support</h2>
+                            <ul class="space-y-2 mt-4">
+                                <li><a href="#"
+                                        class="text-gray-600 hover:text-indigo-700 transition duration-300">FAQ</a></li>
+                                <li><a href="#"
+                                        class="text-gray-600 hover:text-indigo-700 transition duration-300">Contact
+                                        Us</a></li>
+                                <li><a href="#"
+                                        class="text-gray-600 hover:text-indigo-700 transition duration-300">Terms &
+                                        Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Section -->
+                    <div class="w-full md:w-1/4 flex justify-start md:justify-end space-x-4 mt-8 md:mt-0">
+                        <!-- Facebook -->
+                        <a href="#" class="flex items-center justify-center animate-rotate transition-transform duration-300 hover:scale-110">
+                            <svg class="w-10 h-10" viewBox="0 0 32 32" id="Camada_1" version="1.1" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <style type="text/css">
+                                    .st0 {
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                        fill: #FFFFFF;
+                                    }
+                                </style>
+                                <path
+                                    d="M6,2h20c2.2,0,4,1.8,4,4v20c0,2.2-1.8,4-4,4H6c-2.2,0-4-1.8-4-4V6C2,3.8,3.8,2,6,2z" />
+                                <path class="st0"
+                                    d="M13.2,16.1v9.7c0,0.1,0.1,0.3,0.3,0.3h3.9c0.2,0,0.3-0.1,0.3-0.3v-9.8h2.8c0.1,0,0.3-0.1,0.3-0.2l0.3-3  c0-0.2-0.1-0.3-0.3-0.3h-3.1v-2.1c0-0.5,0.4-0.9,1-0.9h2.2c0.2,0,0.3-0.1,0.3-0.3V6.3C21,6.1,20.9,6,20.7,6h-3.6  c-2.1,0-3.9,1.6-3.9,3.6v2.9h-1.9c-0.2,0-0.3,0.1-0.3,0.3v3c0,0.1,0.1,0.3,0.3,0.3h1.9V16.1z" />
+                            </svg>
+                        </a>
+
+                        <!-- Twitter -->
+                        <a href="#" class="flex items-center justify-center animate-rotate transition-transform duration-300 hover:scale-110">
+                            <svg fill="#000000" class="w-10 h-10" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="-143 145 512 512" xml:space="preserve">
+                                <path
+                                 d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z
+                                M215.2,361.2c0.1,2.2,0.1,4.5,0.1,6.8c0,69.5-52.9,149.7-149.7,149.7c-29.7,0-57.4-8.7-80.6-23.6c4.1,0.5,8.3,0.7,12.6,0.7
+                                c24.6,0,47.3-8.4,65.3-22.5c-23-0.4-42.5-15.6-49.1-36.5c3.2,0.6,6.5,0.9,9.9,0.9c4.8,0,9.5-0.6,13.9-1.9
+                                C13.5,430-4.6,408.7-4.6,383.2v-0.6c7.1,3.9,15.2,6.3,23.8,6.6c-14.1-9.4-23.4-25.6-23.4-43.8c0-9.6,2.6-18.7,7.1-26.5
+                                c26,31.9,64.7,52.8,108.4,55c-0.9-3.8-1.4-7.8-1.4-12c0-29,23.6-52.6,52.6-52.6c15.1,0,28.8,6.4,38.4,16.6
+                                c12-2.4,23.2-6.7,33.4-12.8c-3.9,12.3-12.3,22.6-23.1,29.1c10.6-1.3,20.8-4.1,30.2-8.3C234.4,344.5,225.5,353.7,215.2,361.2z" />
+                            </svg>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="#" class="flex items-center justify-center animate-rotate transition-transform duration-300 hover:scale-110">
+                            <svg class="h-10 w-10" viewBox="0 0 32 32" id="Camada_1" version="1.1" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                <style type="text/css">
+                                    .st0 {
+                                        fill: #FFFFFF;
+                                    }
+                                </style>
+
+                                <path
+                                    d="M6,2h20c2.2,0,4,1.8,4,4v20c0,2.2-1.8,4-4,4H6c-2.2,0-4-1.8-4-4V6C2,3.8,3.8,2,6,2z" />
+
+                                <g>
+
+                                    <path class="st0"
+                                        d="M21.3,9.7c-0.6,0-1.2,0.5-1.2,1.2c0,0.7,0.5,1.2,1.2,1.2c0.7,0,1.2-0.5,1.2-1.2C22.4,10.2,21.9,9.7,21.3,9.7z" />
+
+                                    <path class="st0"
+                                        d="M16,11.2c-2.7,0-4.9,2.2-4.9,4.9c0,2.7,2.2,4.9,4.9,4.9s4.9-2.2,4.9-4.9C21,13.4,18.8,11.2,16,11.2z M16,19.3   c-1.7,0-3.2-1.4-3.2-3.2c0-1.7,1.4-3.2,3.2-3.2c1.7,0,3.2,1.4,3.2,3.2C19.2,17.9,17.8,19.3,16,19.3z" />
+
+                                    <path class="st0"
+                                        d="M20,6h-8c-3.3,0-6,2.7-6,6v8c0,3.3,2.7,6,6,6h8c3.3,0,6-2.7,6-6v-8C26,8.7,23.3,6,20,6z M24.1,20   c0,2.3-1.9,4.1-4.1,4.1h-8c-2.3,0-4.1-1.9-4.1-4.1v-8c0-2.3,1.9-4.1,4.1-4.1h8c2.3,0,4.1,1.9,4.1,4.1V20z" />
+
+                                </g>
+
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+
+
+        </div>
+</body>
+
+</html>

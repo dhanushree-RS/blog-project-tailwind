@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .sign-btn {
+        @apply px-7 py-1 rounded-full
+         bg-violet-400 hover:bg-purple-600
+          hover:text-yellow-100
+    }
+}
+
+.bg-custom-gradient {
+    background: #e6e7eb;
+}
+
+
+/* input.css */
+/* input.css */
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #e0b3ff; /* Light purple */
+  }
+  25% {
+    border-color: #c76dd4; /* Medium-light purple */
+  }
+  50% {
+    border-color: #9b5fc0; /* Medium purple */
+  }
+  75% {
+    border-color: #6d2c91; /* Dark purple */
+  }
+  100% {
+    border-color: #3f007d; /* Very dark purple */
+  }
+}
+
+
+.animated-border {
+  border-width: 4px;
+  border-style: solid;
+  border-color: #080101; 
+  animation: borderAnimation 4s linear infinite;
+}
+
+/* .animated-border {
+  border: 1px solid;
+  border-radius: 4px;
+  animation: borderAnimation 7s infinite;
+} */
+
+
+
+
+/* 
+@layer utilities {
+    .bg-custom-gradient {
+      background-image: linear-gradient(135deg, #4B0082, #00BFFF, #8A2BE2);
+      background-size: 400% 400%;
+    }
+  
+    @keyframes gradientAnimation {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+  
+    .animate-gradient-move {
+      animation: gradientAnimation 15s ease infinite;
+    }
+  } */
